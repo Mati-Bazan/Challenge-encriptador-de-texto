@@ -7,7 +7,9 @@
     --color-cuatro: #495057;
     --color-hover: #D8DFE8;
 
-    --fuente-krona: "Inter", sans-serif;;
+    --color-btn-uno:#072549;
+    --color-btn-dos:#c1c5ca;
+    --fuente-Inter: "Inter", sans-serif;
 }
 
 * {
@@ -16,6 +18,7 @@
 }
 
 body {
+    font-family: var(--fuente-Inter);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -37,11 +40,135 @@ body {
 
 .section_input {
     width: 680px;
-    height: auto; /* Ajusta según el contenido */
+    height: 100vh;
+    position: relative;
+    padding-top: 128px;
+    box-sizing: border-box;
 }
+
+.textarea {
+    width: calc(100% - 0px);
+    color: var(--color-tres);
+    font-size: 32px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    resize: none;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    white-space: pre-wrap; /* Permite el salto de línea */
+    font-family: var(--fuente-Inter);
+    height: calc(1.5em * 7);
+}
+
+.textarea::placeholder {
+    color: var(--color-tres);
+}
+
+.main_info {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    position: absolute;
+    bottom: 115px; /* Altura de los botones (67px) + margen inferior (32px) + separación (16px) */
+    width: 100%;
+    padding: 0 12px; /* Asegura que el contenido no toque los bordes */
+    box-sizing: border-box;
+}
+
+.svg_info {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px; /* Espacio entre el SVG y el texto */
+}
+
+.p_info {
+    margin: 0;
+    font-family: var(--fuente-Inter);
+}
+
+.main_button {
+    position: absolute;
+    bottom: 32px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    box-sizing: border-box;
+}
+.encriptar_btn {
+    background-color: var(--color-tres);
+    border-color: var(--color-uno);
+    color: var(--color-uno);
+}
+
+.desencriptar_btn {
+    background-color: var(--color-hover);
+    border-color: var(--color-tres);
+    color: var(--color-tres);
+}
+.encriptar_btn, .desencriptar_btn {
+    flex: 1;
+    height: 67px;
+    margin: 0 12px; /* Margin to get 24px between the buttons */
+    border-radius: 24px;
+    font-family: var(--fuente-Inter);
+    border: 1px solid; /* Mantén el borde con colores */
+}
+
+.encriptar_btn:active {
+    background-color: var(--color-btn-uno);
+    color: var(--color-uno);
+}
+
+.desencriptar_btn:active {
+    background-color: var(--color-btn-dos);
+    color: var(--color-tres);
+}
+
+.encriptar_btn:focus, .encriptar_btn:active,
+.desencriptar_btn:focus, .desencriptar_btn:active {
+    outline: none; /* Remove outline */
+    box-shadow: none; /* Remove box-shadow */
+}
+
+.encriptar_btn:first-child {
+    margin-left: 0;
+}
+
+.desencriptar_btn:last-child {
+    margin-right: 0;
+}
+
 
 .section_output {
     width: 400px;
-    height: 944px; /* Ajusta según el contenido */
+    height: 100vh;
     background-color: var(--color-dos);
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 243px 32px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.section_output img {
+    width: 336px;
+    height: 304px;
+    margin-bottom: 32px; /* Espacio entre la imagen y el primer párrafo */
+}
+
+.p_title {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 16px; /* Espacio entre los párrafos */
+}
+
+.p_subtitle {
+    font-size: 16px;
 }
