@@ -111,6 +111,7 @@ body {
 }
 .encriptar_btn, .desencriptar_btn {
     flex: 1;
+    font-size: 16px;
     height: 67px;
     margin: 0 12px; /* Margin to get 24px between the buttons */
     border-radius: 24px;
@@ -152,10 +153,19 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 243px 32px;
+    padding: 32px;
     box-sizing: border-box;
     text-align: center;
+    position: relative; /* Añade position: relative para posicionar el nuevo párrafo */
 }
+
+.section_output .nuevo_parrafo {
+    position: absolute; /* Posiciona el nuevo párrafo en relación a la sección */
+    top: 32px; /* Separa el párrafo del borde superior */
+    left: 32px; /* Separa el párrafo del borde izquierdo */
+    width: calc(100% - 64px); /* Ajusta el ancho para el padding */
+}
+
 
 .section_output img {
     width: 336px;
@@ -171,4 +181,41 @@ body {
 
 .p_subtitle {
     font-size: 16px;
+}
+
+.nuevo_parrafo {
+    font-size: 24px;
+    color: var(--color-tres);
+    margin: 0; /* Elimina cualquier margen predeterminado */
+    padding: 32px; /* Añade el padding para separar el texto del borde */
+    text-align: left;
+    background-color: transparent; /* Fondo transparente */
+    width: calc(100% - 64px); /* Ajusta el ancho para el padding */
+    box-sizing: border-box; /* Asegura que el padding esté incluido en el tamaño */
+}
+
+.nuevo_btn {
+    position: absolute;
+    font-size: 16px;
+    bottom: 32px; /* Separa el botón del borde inferior */
+    left: 32px; /* Separa el botón del borde izquierdo */
+    width: calc(100% - 64px); /* Ajusta el ancho para el padding */
+    height: 67px; /* Altura del botón */
+    background-color: var(--color-dos);
+    border: 1px solid var(--color-tres);
+    color: var(--color-tres);
+    border-radius: 24px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.nuevo_btn:focus, .nuevo_btn:active {
+    outline: none; /* Remove outline */
+    box-shadow: none; /* Remove box-shadow */
+}
+
+.nuevo_btn:active {
+    background-color: var(--color-btn-dos);
+    color: var(--color-tres);
 }
