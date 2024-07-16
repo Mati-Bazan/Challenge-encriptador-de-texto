@@ -47,7 +47,7 @@ body {
 }
 
 .textarea {
-    width: calc(100% - 0px);
+    width: 100%;
     color: var(--color-tres);
     font-size: 32px;
     border: none;
@@ -98,6 +98,7 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
 .encriptar_btn {
     background-color: var(--color-tres);
     border-color: var(--color-uno);
@@ -109,6 +110,7 @@ body {
     border-color: var (--color-tres);
     color: var(--color-tres);
 }
+
 .encriptar_btn, .desencriptar_btn {
     flex: 1;
     font-size: 16px;
@@ -150,6 +152,8 @@ body {
     border-radius: 32px;
     display: flex;
     flex-direction: column;
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
     padding: 32px;
     box-sizing: border-box;
     text-align: center;
@@ -207,28 +211,70 @@ body {
     color: var(--color-tres);
 }
 
+
+
 /* Media Query */ 
 @media (max-width: 1000px) {
     .main_web {
         flex-direction: column;
         gap: 32px;
     }
+
+    .section_input {
+        height: 70vh;
+    }
+
+    .textarea {
+        height: calc(1.5em * 12);
+    }
   
     .section_input, .section_output {
         width: 100%;
         padding: 32px;
         box-sizing: border-box;
-    }
-  
-    .section_output, .section_input {
         min-height: auto; /* Asegurar que la altura sea automática */
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start; /* Cambiado para alinear el contenido al principio */
+        justify-content: flex-start;
     }
   
     .section_output img {
         display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .section_input {
+        height: auto;
+        min-height: 60vh;
+    }
+
+    .textarea {
+        height: calc(1.5em * 7);
+    }
+
+    .main_button {
+        height: 170px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho */
+    }
+
+    .encriptar_btn, .desencriptar_btn {
+        width: 100%; /* Asegúrate de que los botones ocupen todo el ancho del contenedor */
+        height: 67px;
+        margin: 0;
+        margin-bottom: 24px; /* Separación entre los botones */
+        height: 67px; /* Mantén la altura especificada */
+    }
+
+    .desencriptar_btn:last-child {
+        margin-bottom: 0; /* Elimina la separación después del último botón */
+    }
+
+    .main_info {
+        bottom: 250px; /* Nueva posición: margen inferior (32px) + altura de dos botones (67px * 2) + separación entre botones (24px) */
     }
 }
