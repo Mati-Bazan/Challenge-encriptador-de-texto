@@ -1,5 +1,7 @@
+/* Fuente */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+/* Colores y fuente */
 :root {
     --color-uno: #CED4DA;
     --color-dos: #FFFFFF;
@@ -12,11 +14,13 @@
     --fuente-Inter: "Inter", sans-serif;
 }
 
+/* General */
 * {
     padding: 0;
     margin: 0;
 }
 
+/* Cuerpo de la pagina */
 body {
     font-family: var(--fuente-Inter);
     margin: 0;
@@ -25,6 +29,7 @@ body {
     background-color: var(--color-uno);
 }
 
+/* Seccion main */
 .main_web {
     display: flex;
     align-items: flex-start;
@@ -32,15 +37,17 @@ body {
     padding: 40px;
 }
 
+/* Logo de alura */
 .alura_logo {
     margin-right: auto;
     width: auto;
     height: auto;
 }
 
+/* Seccion input */
 .section_input {
     width: 680px;
-    height: 100vh;
+    height: 90vh;
     position: relative;
     padding-top: 128px;
     box-sizing: border-box;
@@ -72,16 +79,16 @@ body {
     align-items: center;
     font-size: 12px;
     position: absolute;
-    bottom: 115px; /* Altura de los botones (67px) + margen inferior (32px) + separación (16px) */
+    bottom: 115px;
     width: 100%;
-    padding: 0 12px; /* Asegura que el contenido no toque los bordes */
+    padding: 0 12px;
     box-sizing: border-box;
 }
 
 .svg_info {
     width: 16px;
     height: 16px;
-    margin-right: 8px; /* Espacio entre el SVG y el texto */
+    margin-right: 8px; 
 }
 
 .p_info {
@@ -115,10 +122,10 @@ body {
     flex: 1;
     font-size: 16px;
     height: 67px;
-    margin: 0 12px; /* Margin to get 24px between the buttons */
+    margin: 0 12px;
     border-radius: 24px;
     font-family: var(--fuente-Inter);
-    border: 1px solid; /* Mantén el borde con colores */
+    border: 1px solid;
 }
 
 .encriptar_btn:active {
@@ -133,8 +140,8 @@ body {
 
 .encriptar_btn:focus, .encriptar_btn:active,
 .desencriptar_btn:focus, .desencriptar_btn:active {
-    outline: none; /* Remove outline */
-    box-shadow: none; /* Remove box-shadow */
+    outline: none;
+    box-shadow: none;
 }
 
 .encriptar_btn:first-child {
@@ -145,15 +152,16 @@ body {
     margin-right: 0;
 }
 
+/* Seccion output */
 .section_output {
     width: 400px;
-    min-height: 100vh; /* Cambiar de height a min-height */
+    min-height: 90vh;
     background-color: var(--color-dos);
     border-radius: 32px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centrar verticalmente */
-    align-items: center; /* Centrar horizontalmente */
+    justify-content: center;
+    align-items: center;
     padding: 32px;
     box-sizing: border-box;
     text-align: center;
@@ -163,33 +171,34 @@ body {
 .section_output img {
     width: 336px;
     height: 304px;
-    margin-bottom: 32px; /* Espacio entre la imagen y el primer párrafo */
+    margin-bottom: 32px;
 }
 
 .p_title {
     font-weight: bold;
     font-size: 24px;
-    margin-bottom: 16px; /* Espacio entre los párrafos */
+    margin-bottom: 16px;
 }
 
 .p_subtitle {
     font-size: 16px;
 }
 
+/* Parrafo creado con js */
 .nuevo_parrafo {
     font-size: 24px;
     color: var(--color-tres);
-    margin: 0 0 32px 0; /* Elimina cualquier margen predeterminado y agrega margen inferior */
+    margin: 0 0 32px 0;
     text-align: left;
-    background-color: transparent; /* Fondo transparente */
-    width: 100%; /* Ajusta el ancho para el padding */
-    box-sizing: border-box; /* Asegura que el padding esté incluido en el tamaño */
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
 }
-
+/* Boton creado con js */
 .nuevo_btn {
     font-size: 16px;
-    width: 100%; /* Ajusta el ancho para el padding */
-    height: 67px; /* Altura del botón */
+    width: 100%;
+    height: 67px;
     background-color: var(--color-dos);
     border: 1px solid var(--color-tres);
     color: var(--color-tres);
@@ -197,13 +206,13 @@ body {
     font-size: 18px;
     cursor: pointer;
     text-align: center;
-    margin-top: auto; /* Empuja el botón al final del contenedor */
-    box-sizing: border-box; /* Asegura que el padding esté incluido en el tamaño */
+    margin-top: auto;
+    box-sizing: border-box;
 }
 
 .nuevo_btn:focus, .nuevo_btn:active {
-    outline: none; /* Remove outline */
-    box-shadow: none; /* Remove box-shadow */
+    outline: none;
+    box-shadow: none;
 }
 
 .nuevo_btn:active {
@@ -211,7 +220,36 @@ body {
     color: var(--color-tres);
 }
 
+/* Footer */ 
+.footer_rodapie {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color:var(--color-dos);
+}
 
+.p_footer {
+    font-family: var(--fuente-Inter);
+    margin: 0;
+    font-size: 16px;
+}
+
+.footer_rodapie div {
+    margin-top: 10px;
+}
+
+.footer_rodapie a {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0;
+}
+
+.p_img {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
 
 /* Media Query */ 
 @media (max-width: 1000px) {
@@ -232,7 +270,7 @@ body {
         width: 100%;
         padding: 32px;
         box-sizing: border-box;
-        min-height: auto; /* Asegurar que la altura sea automática */
+        min-height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -259,22 +297,22 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho */
+        width: 100%;
     }
 
     .encriptar_btn, .desencriptar_btn {
-        width: 100%; /* Asegúrate de que los botones ocupen todo el ancho del contenedor */
+        width: 100%;
         height: 67px;
         margin: 0;
-        margin-bottom: 24px; /* Separación entre los botones */
-        height: 67px; /* Mantén la altura especificada */
+        margin-bottom: 24px;
+        height: 67px;
     }
 
     .desencriptar_btn:last-child {
-        margin-bottom: 0; /* Elimina la separación después del último botón */
+        margin-bottom: 0;
     }
 
     .main_info {
-        bottom: 250px; /* Nueva posición: margen inferior (32px) + altura de dos botones (67px * 2) + separación entre botones (24px) */
+        bottom: 250px;
     }
 }
