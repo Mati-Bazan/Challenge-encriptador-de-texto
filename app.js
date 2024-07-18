@@ -83,7 +83,7 @@ function mostrarResultado(texto) {
     // Crea el nuevo botón "Copiar"
     const nuevoBtn = document.createElement('button');
     nuevoBtn.textContent = 'Copiar';
-    nuevoBtn.className = 'nuevo_btn'; // Agrega una clase al nuevo botón
+    nuevoBtn.className = 'nuevo_btn';
     nuevoBtn.onclick = () => copyFunction(texto);
     sectionOutput.appendChild(nuevoBtn);
 }
