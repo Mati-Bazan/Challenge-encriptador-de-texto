@@ -1,5 +1,6 @@
 <h1>Challenge Encriptador de texto</h1>
-# Proyecto
+
+## Proyecto
 
 Este proyecto fue realizado con HTML, CSS y JavaScript. Es parte del programa "Programación G7 - ONE" de Alura y Oracle.
 
